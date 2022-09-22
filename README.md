@@ -1,2 +1,2 @@
 # Algorithm_cpp
-This is a auto push repository for Baekjoon Online Judge created with [BaekjoonHub](https://github.com/BaekjoonHub/BaekjoonHub).
+c++로 풀어보는 알고리즘
