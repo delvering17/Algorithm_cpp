@@ -5,7 +5,7 @@ int cal(int arr[], int cnt, int time, int price) {
     int pay = 0;
 
     for(int i = 0 ; i < cnt ; i++) {
-        pay += (arr[i] / time) * price + price ;
+        pay += (arr[i] / time + 1) * price ;
     }
     return pay;
 }
@@ -18,9 +18,7 @@ int main(void) {
     cin >> cnt;
 
     int arr[cnt];
-    for(int i = 0 ; i < cnt ; i++) {
-        cin >> arr[i];
-    }
+    for(int i = 0 ; i < cnt ; i++) cin >> arr[i];
     
     int Y = cal(arr, cnt, 30, 10);
     int M = cal(arr, cnt, 60, 15);
