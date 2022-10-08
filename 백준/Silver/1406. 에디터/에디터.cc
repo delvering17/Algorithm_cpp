@@ -72,3 +72,55 @@ int main(void) {
 
   return 0;
 }
+
+
+// STL List 이용
+/*
+#include <bits/stdc++.h>
+using namespace std;
+
+
+list<char> L;
+
+int main(void) {
+  ios::sync_with_stdio(0);
+  cin.tie(0);
+
+  string str;
+  cin >> str;
+  for(auto c : str) L.push_back(c);
+  auto cursor = L.end();
+  
+  int time;
+  cin >> time;
+  while(time--) {
+    char c;
+    cin >> c;
+
+    switch(c) {
+      case 'L':
+        if(cursor != L.begin())cursor--;
+        break;
+      case 'D':
+        if(cursor != L.end())cursor++;
+        break;
+      case 'B':
+        if(cursor != L.begin()) {
+          cursor--;
+          cursor =L.erase(cursor);
+        }
+        break;
+      case 'P':
+        char h;
+        cin >> h;
+        L.insert(cursor, h);
+        break;
+    }
+  }
+
+  for(auto c : L) cout << c;
+
+
+  return 0;
+}
+*/
