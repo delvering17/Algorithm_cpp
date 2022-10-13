@@ -12,14 +12,13 @@ int main(void) {
   while(K--) {
     int n;
     cin >> n;
-    if(n) {
-      S.push(n);
-      sum += n;
-    } 
-    else {
-      sum -= S.top();
-      S.pop();
-    }
+    if(n) S.push(n); 
+    else S.pop();
+  }
+
+  while(!S.empty()) {
+    sum += S.top();
+    S.pop();
   }
   cout << sum;
 }
