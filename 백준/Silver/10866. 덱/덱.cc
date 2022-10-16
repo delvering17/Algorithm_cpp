@@ -1,13 +1,10 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-const int MX = 1000005;
-int dat[2*MX+1];
-int head = MX, tail = MX;
-
 int main(void){
   ios::sync_with_stdio(0);
   cin.tie(0);
+  deque<int> DQ;
 
   int N;
   cin >> N;
@@ -17,52 +14,52 @@ int main(void){
     if(str == "push_front") {
       int num;
       cin >> num;
-      dat[--head] = num;
+      DQ.push_front(num);
     }
     else if(str == "push_back") {
       int num;
       cin >> num;
-      dat[tail++] = num;
+      DQ.push_back(num);
     }
     else if(str == "pop_front") {
-      if(head == tail) {
+      if(DQ.empty()) {
         cout << -1 << '\n';
       }
       else {
-        cout << dat[head++] << '\n'; 
+        cout << DQ.front() << '\n'; 
+        DQ.pop_front();
       }
     }
     else if(str == "pop_back") {
-      if(head == tail) {
+      if(DQ.empty()) {
         cout << -1 << '\n';
       }
       else {
-        cout << dat[--tail] << '\n';
+        cout << DQ.back() << '\n';
+        DQ.pop_back();
       }
     }
     else if(str == "size") {
-      cout << tail - head << '\n';
+      cout << DQ.size() << '\n';
     }
     else if(str == "empty") {
-      cout << (int)(tail-head == 0) << '\n';
+      cout << DQ.empty() << '\n';
     }
     else if(str == "front") {
-      if(head == tail) {
+      if(DQ.empty()) {
         cout << -1 << '\n';
       }
       else {
-        cout << dat[head] << '\n';
+        cout << DQ.front() << '\n';
       }
     }
     else {
-      if(head == tail) {
+      if(DQ.empty()) {
         cout << -1 << '\n';
       }
       else {
-        cout << dat[tail-1] << '\n';
+        cout << DQ.back() << '\n';
       }
     }
   }
-
-
 }
