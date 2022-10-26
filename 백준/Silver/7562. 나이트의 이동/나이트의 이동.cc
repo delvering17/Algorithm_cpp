@@ -11,9 +11,6 @@ int dist[302][302];
 int dx[8] = {-2,-2,-1,-1,1,1,2,2};
 int dy[8] = {-1,1,-2,2,-2,2,-1,1};
 queue<pair<int,int>> q;
-void bfs(int x, int y) {
-
-}
 
 int main() {
     ios::sync_with_stdio(0);
