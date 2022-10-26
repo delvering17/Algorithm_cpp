@@ -26,7 +26,6 @@ int main() {
         for(int i = 0 ; i < n; i++) fill(dist[i], dist[i] + n, -1);
         q.push({ax, ay});
         dist[ax][ay] = 0;
-        int res = 0;
         while(!q.empty()) {
             auto cur = q.front(); q.pop();
             for(int i = 0 ; i < 8; i++) {
